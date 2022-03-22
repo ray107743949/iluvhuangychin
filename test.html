@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload=function(){
+            let pressme = document.getElementById("pressme")
+            pressme.onclick=function(){
+                console.log(this.innerText)
+                console.log(this.innerHTML)
+                console.log(this.inner)
+            }
+        }
+    </script>
+    <style>
+        .pressme{
+            border: solid 0.5px;
+            background-color: rgb(136, 193, 216);
+            height: 50px ;
+            width: 80px ;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            text-align: center;
+            line-height: 45px;
+            color: rgb(0, 5, 0);
+            
+        }
+        .main{
+            width: 100%;
+            height: 800px;
+            text-align: center;
+            
+
+        }
+    </style>
+</head>
+<body>
+    
+    <div><span id="pressme" class="pressme" >按我123</span></div>
+
+
+</body>
+</html>

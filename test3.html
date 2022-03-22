@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    window.onload=function(){
+        button=document.getElementById("button")
+        button.onclick=function(){
+            const a=document.getElementById("a")
+            const b=document.getElementById("b")
+            const dx=0.01
+            for(x=a;x<b;x+=dx){
+                s=s+(x*x+1)*dx;
+            }
+        }
+    
+    }
+</script>
+<span>a <input type="text" id="a" ></span>
+<span>b <input type="text" id="b" ></span>
+<button id="button">計算</button>
+
+    
+</body>
+</html>

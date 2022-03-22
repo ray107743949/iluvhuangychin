@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            const button = document.getElementById("button")
+            button.onclick= function(){
+                const c = document.getElementById("c").value
+                const e = document.getElementById("e").value
+                const m = document.getElementById("m").value
+                let all = parseInt(c)+parseInt(e)+parseInt(m)
+                all=all/3
+                
+
+                let end=document.getElementById("end")
+                
+                if (all<60){
+                    end.style.color="blue";
+                    }else{
+                    end.style.color="red";
+                }
+                document.getElementById("end").innerHTML=all.toFixed(2)
+                console.log(all)
+            }
+
+
+        }
+    </script>
+</head>
+<body>
+    <style>
+        .bag{
+            background-color: aquamarine;
+            border-radius: 10px;
+            height: 200px;
+            width: 300px;
+        }
+        .end{
+            color: black;
+        }
+    </style>
+    <div class="bag">
+        <span id="">國：</span><input type="text" id="c"><br>
+        <span id="">英：</span><input type="text" id="e"><br>
+        <span id="">數：</span><input type="text" id="m" ><br>
+        <span id="">平均：</span><span id="end" class="end"></span><br>
+        <button id="button">計算</button>
+    </div>
+    
+</body>
+</html>

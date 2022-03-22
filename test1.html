@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload=function(){           
+            const botton = document.getElementById("botton")
+            botton.onclick=function(){
+                const number1= document.getElementById("number1").value
+                const number2= document.getElementById("number2").value
+                const option = document.getElementById("option").value 
+                let end = eval(number1 +option+ number2)
+                console.log(end)
+                document.getElementById("end").innerHTML = String(end)
+            }
+
+        }
+        
+    </script>
+</head>
+<body>
+    <style>
+        .add{
+            position: absolute;
+            top: 150px;
+            left: 200px;
+        }
+        .button{
+            position: absolute;
+            top: 200px;
+            left: 342px;
+            width: 90px;
+            height: 50px;
+            font-size: 30px;
+
+        }
+        .background{
+            position: absolute;
+            height: 300px;
+            width: 800px;
+            background-color: aquamarine ;
+            top: 38%;
+            left: 30%;
+            text-align: center;
+            border-radius: 8px;
+        }
+        .text{
+            position: absolute;
+            top: 40px;
+            left: 300px;
+            font-size: 60px;
+        }
+        .end{
+            background-color: rgb(255, 255, 255);
+            border: solid 0.01px;
+        }  
+            
+        
+        
+    </style>
+        <div class="background">
+            <div class="text">計算機</div>
+            <div class="add"><input id="number1" type="number">
+            <select name="" id="option" >
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">x</option>
+                <option value="/">/</option>
+            </select>
+            <input id="number2" type="number"> = <spen id="end" class="end" ></spen></div>
+            <input type="button" id="botton" class="button" value="計算" >
+        </div>
+</body>
+</html>
